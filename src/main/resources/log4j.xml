@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE log4j:configuration PUBLIC "-//log4j/log4j Configuration//EN" "log4j.dtd">
+
+
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+
+
+    <appender name="Appender1" class="org.apache.log4j.ConsoleAppender">
+
+        <layout class="org.apache.log4j.PatternLayout">
+
+            <param name="ConversionPattern" value="%-7p %d [%t] %c %x - %m%n"/>
+
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelMatchFilter">
+            <param name="LevelToMatch" value="fatal" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+        <filter class="org.apache.log4j.varia.LevelMatchFilter">
+            <param name="LevelToMatch" value="trace" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+        <filter class="org.apache.log4j.varia.LevelMatchFilter">
+            <param name="LevelToMatch" value="debug" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+        <filter class="org.apache.log4j.varia.LevelMatchFilter">
+            <param name="LevelToMatch" value="error" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+        <filter class="org.apache.log4j.varia.DenyAllFilter"/>
+
+    </appender>
+
+
+
+    <appender name="Appender2" class="org.apache.log4j.FileAppender">
+
+        <param name="File" value="web_store.txt" />
+
+        <layout class="org.apache.log4j.PatternLayout">
+
+            <param name="ConversionPattern" value="%-7p %d [%t] %c %x - %m%n"/>
+
+        </layout>
+
+    </appender>
+
+    <root>
+
+        <priority value="TRACE"/>
+
+        <appender-ref ref="Appender1" />
+
+
+    </root>
+
+</log4j:configuration>
