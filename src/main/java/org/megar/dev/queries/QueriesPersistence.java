@@ -68,9 +68,9 @@ public class QueriesPersistence {
                         "PAYID_TIMESLOT_KBK_INN_KPP, SBILL, SBILL_KBK, SBILL_KBK_INN,  SBILL_KBK_INN_KPP, " +
                         "SBILL_TIMESLOT, SBILL_TIMESLOT_INN, SBILL_TIMESLOT_INN_KPP, SBILL_TIMESLOT_KBK," +
                         "SBILL_TIMESLOT_KBK_INN, SBILL_TIMESLOT_KBK_INN_KPP, SYSID, SYSID_KBK, SYSID_KBK_INN," +
-                        "SYSID_KBK_INN_KPP, SYSID_TIMESLOT_KBK, SYSID_TIMESLOT_KBK_INN, SYSID_TIMESLOT_KBK_INN_KPP," +
-                        "TIMESLOT, TIMESLOT_INN_KPP, TIMESLOT_KBK, TIMESLOT_KBK_INN, TIMESLOT_KBK_INN_KPP, TIMESLOT_INN) " +
-                        " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                        "SYSID_KBK_INN_KPP, SYSID_TIMESLOT, SYSID_TIMESLOT_KBK, SYSID_TIMESLOT_KBK_INN, SYSID_TIMESLOT_KBK_INN_KPP," +
+                        "TIMESLOT, TIMESLOT_INN_KPP, TIMESLOT_KBK, TIMESLOT_KBK_INN, TIMESLOT_KBK_INN_KPP, TIMESLOT_OKTMO, ZERO_UIN, TIMESLOT_INN) " +
+                        " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
                 if (dDate.equals(str[0].substring(4, 14))) {
                     prd.setDate(1, java.sql.Date.valueOf(str[0].substring(4, 14).trim()));
