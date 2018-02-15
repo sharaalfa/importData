@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./logs/unifo/logjobejb.log</file>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>#[%d{dd.MM.yyyy HH:mm:ss.SSS}] [%-5level] [%lo.%method] [%msg]%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./logs/unifo/history/logjobwar-%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <maxHistory>14</maxHistory>
+            <totalSizeCap>300MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="ru.roskazna" level="DEBUG"/>
+
+    <logger name="org.springframework" level="WARN"/>
+
+    <logger name="com.datastax" level="WARN"/>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
